@@ -13,7 +13,7 @@ public class Movie {
     String posterPath; //only the path, not full url.
     String backdropPath;
     Double voteAverage;
-    //Integer runtime;
+    String releaseDate;
 
     public Movie() {}
 
@@ -24,12 +24,12 @@ public class Movie {
         posterPath = object.getString("poster_path");
         backdropPath = object.getString("backdrop_path");
         voteAverage = object.getDouble("vote_average");
-        //runtime = object.getInt("runtime");
+        releaseDate = object.getString("release_date");
     }
 
-//    public Integer getRuntime() {
-//        return runtime;
-//    }
+    public String getReleaseDate() {
+        return releaseDate;
+    }
 
     public Double getVoteAverage() {
         return voteAverage;
